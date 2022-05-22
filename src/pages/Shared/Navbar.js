@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/icon/cpu-logo.jpg"
 const Navbar = () => {
-  const menuItems = (
+  const menuItems = 
     <>
       <li>
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/appointment">Computers Hardware</Link>
+        <Link to="/hardwarecomponents">Computers Hardware</Link>
       </li>
       <li>
         <Link to="/review">Review</Link>
@@ -23,7 +23,7 @@ const Navbar = () => {
         <Link to="/login">Login </Link>
       </li>
       </>  
-  );
+  
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -48,7 +48,24 @@ const Navbar = () => {
             tabIndex="0"
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
-            {menuItems}
+          <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/hardwarecomponents">Computers Hardware</Link>
+        </li>
+        <li>
+          <Link to="/review">Review</Link>
+        </li>
+        <li>
+          <Link to="/blogs">Blogs</Link>
+        </li>
+        <li>
+          <Link to="/myportfolio">My Portfolio</Link>
+        </li>
+        <li>
+          <Link to="/login">Login </Link>
+        </li>
           </ul>
         </div>
         <Link to="/"><img src={logo} height="50" width="50"alt="logo" /></Link>
@@ -56,7 +73,24 @@ const Navbar = () => {
         
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal p-0">{menuItems}</ul>
+        <ul className="menu menu-horizontal p-0">      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/hardwarecomponents">Computers Hardware</Link>
+      </li>
+      <li>
+        <Link to="/review">Review</Link>
+      </li>
+      <li>
+        <Link to="/blogs">Blogs</Link>
+      </li>
+      <li>
+        <Link to="/myportfolio">My Portfolio</Link>
+      </li>
+      <li>
+        <Link to="/login">Login </Link>
+      </li></ul>
       </div>
       <div className="navbar-end">
         <label
