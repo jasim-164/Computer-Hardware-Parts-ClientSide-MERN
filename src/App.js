@@ -7,6 +7,9 @@ import Loading from "./pages/Shared/Loading";
 import Login from "./pages/Login/Login";
 import Blogs from "./pages/Blogs/Blogs";
 import HardwareComponents from "./pages/HardwareComponents/HardwareComponents";
+import NotFound from "./pages/NotFound/NotFound";
+import MyPortfolio from "./pages/MyPortfolio/MyPortfolio";
+import Footer from "./pages/Shared/Footer";
 
 function App() {
   return (
@@ -21,7 +24,11 @@ function App() {
         ></Route>
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/myportfolio" element={<MyPortfolio />}/>
+        <Route path="*" element={<NotFound />}/>
       </Routes>
+      
+      <Footer/>
     </div>
   );
 }
