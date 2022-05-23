@@ -10,6 +10,15 @@ import HardwareComponents from "./pages/HardwareComponents/HardwareComponents";
 import NotFound from "./pages/NotFound/NotFound";
 import MyPortfolio from "./pages/MyPortfolio/MyPortfolio";
 import Footer from "./pages/Shared/Footer";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import MakeAdmin from "./pages/Dashboard/MakeAdmin";
+import ManageOrders from "./pages/Dashboard/ManageOrders";
+import ManageProducts from "./pages/Dashboard/ManageProducts";
+import AddProduct from "./pages/Dashboard/AddProduct";
+import Payment from "./pages/Dashboard/Payment";
+import MyReview from "./pages/Dashboard/MyReview";
+import MyProfile from "./pages/Dashboard/MyProfile";
+import MyOrders from "./pages/Dashboard/MyOrders";
 
 function App() {
   return (
@@ -23,12 +32,29 @@ function App() {
           element={<HardwareComponents />}
         ></Route>
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="dashboard" element={<Dashboard />}>
+          <Route index element={<MyOrders></MyOrders>}></Route>
+          <Route path="review" element={<MyReview></MyReview>}></Route>
+          <Route path="history" element={<MyProfile></MyProfile>}></Route>
+          <Route path="payment/:id" element={<Payment></Payment>}></Route>
+          
+          <Route path="addProduct" element={<AddProduct></AddProduct>}></Route>
+          <Route
+            path="manageProducts"
+            element={<ManageProducts></ManageProducts>}
+          ></Route>
+          <Route
+          path="manageOrders"
+          element={<ManageOrders></ManageOrders>}
+        ></Route>
+        <Route path="makeAdmin" element={<MakeAdmin></MakeAdmin>}></Route>
+        </Route>
         <Route path="/login" element={<Login />} />
-        <Route path="/myportfolio" element={<MyPortfolio />}/>
-        <Route path="*" element={<NotFound />}/>
+        <Route path="/myportfolio" element={<MyPortfolio />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
-      
-      <Footer/>
+
+      <Footer />
     </div>
   );
 }
