@@ -2,6 +2,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import Home from "./pages/Home/Home";
 import { Route, Routes } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Navbar from "./pages/Shared/Navbar";
 import Loading from "./pages/Shared/Loading";
 import Login from "./pages/Login/Login";
@@ -53,7 +55,7 @@ function App() {
         <Route path="/myportfolio" element={<MyPortfolio />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-
+      <ToastContainer />
       <Footer />
     </div>
   );
