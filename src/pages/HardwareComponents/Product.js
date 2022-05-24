@@ -15,7 +15,7 @@ const Product = ({product}) => {
         <h2 class="card-title">{name}</h2>
         <h2 class="">price: {price}</h2>
         <h2 class="">available quantity: {quantity}</h2>
-        <p>{description.slice(0,50)}</p>
+        <p>{description?.slice(0,50)}</p>
         <div class="card-actions">
           <button class="btn btn-primary">Buy Now</button>
         </div>

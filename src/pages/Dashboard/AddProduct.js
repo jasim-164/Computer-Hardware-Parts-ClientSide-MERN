@@ -14,12 +14,12 @@ const AddProduct = () => {
     reset,
   } = useForm();
   const onSubmit = async (data) => {
-      //console.log(data.image[0]);
-    const image = data.image[0];
+      console.log(data);
+    const image = data?.image[0];
     const formData = new FormData();
     
     formData.append("image", image);
-    console.log(formData);
+    //console.log(formData);
 
     const url = `https://api.imgbb.com/1/upload?key=${imageStorageKey}`;
     fetch(url, {
@@ -36,11 +36,11 @@ const AddProduct = () => {
             description: data.description,
             price: data.price,
             quantity: data.quantity,
-            image: img,
+            picture: img,
           };
           
           // send to your database
-           fetch("http://localhost:8000/products", {
+           fetch("https://radiant-inlet-73945.herokuapp.com/products", {
             method: "POST",
             headers: {
               "content-type": "application/json",
@@ -145,7 +145,7 @@ const AddProduct = () => {
           <input
             type="number"
             className="input input-bordered w-full max-w-xs"
-            {...register("age", {
+            {...register("price", {
               min: 1,
               max: 9999999,
               required: {
@@ -170,7 +170,7 @@ const AddProduct = () => {
           <input
             type="file"
             className="input input-bordered w-full max-w-xs"
-            {...register("picture", {
+            {...register("image", {
               required: {
                 value: true,
                 message: "Image is Required",
