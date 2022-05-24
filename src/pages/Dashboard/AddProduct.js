@@ -170,7 +170,7 @@ const AddProduct = () => {
           <input
             type="file"
             className="input input-bordered w-full max-w-xs"
-            {...register("image", {
+            {...register("picture", {
               required: {
                 value: true,
                 message: "Image is Required",
