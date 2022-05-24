@@ -6,7 +6,7 @@ import logo from "../../assets/icon/cpu-logo.jpg";
 import { signOut } from "firebase/auth";
 const Navbar = () => {
   const [user] = useAuthState(auth);
-  console.log("user", user);
+  //console.log("user", user);
   const logout = () => {
     signOut(auth);
     //localStorage.removeItem('accessToken');
