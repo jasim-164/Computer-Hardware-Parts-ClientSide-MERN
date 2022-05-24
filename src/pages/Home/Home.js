@@ -4,6 +4,7 @@ import Product from '../HardwareComponents/Product';
 import Navbar from '../Shared/Navbar';
 import Banner from './Banner';
 import Info from './Info';
+import Review from './Review';
 import StatePage from './StatePage';
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
             }
         </div>
         <StatePage/>
+        <Review/>
         </div>
     );
 };
