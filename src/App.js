@@ -22,6 +22,8 @@ import MyReview from "./pages/Dashboard/MyReview";
 import MyProfile from "./pages/Dashboard/MyProfile";
 import MyOrders from "./pages/Dashboard/MyOrders";
 import SignUp from "./pages/Login/SignUp";
+import RequireAuth from "./pages/Login/RequireAuth";
+import OrderProduct from "./pages/HardwareComponents/OrderProduct";
 
 function App() {
   return (
@@ -35,12 +37,13 @@ function App() {
           element={<HardwareComponents />}
         ></Route>
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/orderProduct/:id" element={<RequireAuth><OrderProduct/></RequireAuth>}></Route>
+
         <Route path="dashboard" element={<Dashboard />}>
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path="review" element={<MyReview></MyReview>}></Route>
           <Route path="history" element={<MyProfile></MyProfile>}></Route>
           <Route path="payment/:id" element={<Payment></Payment>}></Route>
-          
           <Route path="addProduct" element={<AddProduct></AddProduct>}></Route>
           <Route
             path="manageProducts"

@@ -7,19 +7,27 @@ import { toast } from "react-toastify";
 import Loading from "../Shared/Loading";
 const MyProfile = () => {
   const [user] = useAuthState(auth);
-  const [userData, setUserData] = useState({});
+
+ console.log(user);
   const {
     register,
     formState: { errors },
     handleSubmit,
     reset,
   } = useForm();
+
   const email = user?.email;
-  const{data:userdata,isLoading,refetch}= useQuery('userData',()=>fetch(`http://localhost:8000/user/${email}`).then(res => res.json()))
+  const fetchUsers = async () => {
+    const res = await fetch(`http://localhost:8000/user/${email}`);
+    return res;
+  };
+  const{data:userdata,isLoading,refetch}= useQuery('userData',fetchUsers)
   if(isLoading) {
+   
     return <Loading/>
+    
   }
-  refetch();
+  
   console.log(userdata);
 
   const onSubmit = async (data) => {
@@ -42,7 +50,7 @@ const MyProfile = () => {
                
                 //const university = data.university;
                 //localStorage.setItem('accessToken', accessToken);
-                setUserData(data);
+                
                 reset();
                 refetch();
             })
