@@ -18,7 +18,7 @@ const Product = ({product}) => {
         <h2 class="">available quantity: {quantity}</h2>
         <p>{description?.slice(0,50)}</p>
         <div class="card-actions">
-        <Link to={`/orderProduct/${_id}`} data={product}><button class="btn btn-primary ">Update</button></Link>
+        <Link to={`/orderProduct/${_id}`} product={product}><button class="btn btn-primary ">Update</button></Link>
         
 
         </div>
