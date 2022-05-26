@@ -4,13 +4,15 @@ import auth from '../../firebase.init';
 import { Link, useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 
+
+
 const MyOrders = () => {
     const [bookings, setBooking] = useState([]);
     const [user] = useAuthState(auth);
     const navigate = useNavigate();
     useEffect(() => {
         if (user) {
-            fetch(` http://localhost:8000/booking?email=${user?.email}`, {
+            fetch(` https://radiant-inlet-73945.herokuapp.com/booking?email=${user?.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -55,7 +57,7 @@ const MyOrders = () => {
                             <td>{value?.productName}</td>
                             <td>{value?.quantity}</td>
                             <td>{value?.email}</td>
-                            {(!value?.price && !value.paid) && <Link to={`/dashboard/payment/${value._id}`}><button className='btn btn-xs btn-success'>pay</button></Link>}
+                            {(!value.paid) && <Link to={`/dashboard/payment/${value._id}`}><button className='btn btn-xs btn-success'>pay</button></Link>}
                             <td> {(value.price && value.paid) && <div>
                                 <p><span className='text-success'>Paid</span></p>
                                 <p>Transaction id: <span className='text-success'>{value.transactionId}</span></p>

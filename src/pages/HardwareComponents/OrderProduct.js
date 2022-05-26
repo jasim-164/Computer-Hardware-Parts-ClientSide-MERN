@@ -25,7 +25,7 @@ const {
 const fetchUsers = async () => {
  
     
-    const res = await fetch(`http://localhost:8000/products/${id}`);
+    const res = await fetch(`https://radiant-inlet-73945.herokuapp.com/products/${id}`);
     return res.json();
   };
   const{data:product,isLoading,refetch}= useQuery('product',fetchUsers)
@@ -42,7 +42,7 @@ const fetchUsers = async () => {
     const onSubmit = (data1 , event)=>{
       event.preventDefault();
       console.log(data1);
-      fetch('http://localhost:8000/booking',{
+      fetch('https://radiant-inlet-73945.herokuapp.com/booking',{
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(data1)
@@ -102,7 +102,7 @@ const fetchUsers = async () => {
       
       <div className="card w-96 bg-base-100 shadow-xl">
       <div className="card-body">
-        <h2 className="text-center text-2xl font-bold">Login</h2>
+        <h2 className="text-center text-2xl font-bold">Book This Product</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="form-control w-full max-w-xs">
             <label className="label">
@@ -125,6 +125,32 @@ const fetchUsers = async () => {
               readOnly value={user?.displayName || ''}
               className="input input-bordered w-full max-w-xs"
               {...register("customerName")}
+            />
+    
+          </div>
+          <div className="form-control w-full max-w-xs">
+            <label className="label">
+              <span className="label-text">Product Id</span>
+            </label>
+            <input
+              type="text"
+             
+              readOnly value={id || ''}
+              className="input input-bordered w-full max-w-xs"
+              {...register("_id")}
+            />
+    
+          </div>
+          <div className="form-control w-full max-w-xs">
+            <label className="label">
+              <span className="label-text"> Price</span>
+            </label>
+            <input
+              type="text"
+             
+              readOnly value={product?.price || ''}
+              className="input input-bordered w-full max-w-xs"
+              {...register("price")}
             />
     
           </div>

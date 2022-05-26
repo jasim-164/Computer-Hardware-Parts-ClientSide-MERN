@@ -4,7 +4,7 @@ const Review = () => {
     // const { isLoading, error, data }= useQuery ("services",fetch('http://localhost:8000/reviews'));
     // console.log(data);
     const fetchUsers = async () => {
-        const res = await fetch("http://localhost:8000/reviews");
+        const res = await fetch("https://radiant-inlet-73945.herokuapp.com/reviews");
         return res.json();
       };
       

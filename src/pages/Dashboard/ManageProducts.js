@@ -7,7 +7,7 @@ import DeleteConfirmModal from './DeleteConfirmModal';
 const ManageProducts = () => {
     const [deletingProduct, setDeletingProduct] = useState(null);
 
-    const { data: products, isLoading, refetch } = useQuery('products', () => fetch('http://localhost:8000/products', {
+    const { data: products, isLoading, refetch } = useQuery('products', () => fetch('https://radiant-inlet-73945.herokuapp.com/products', {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }

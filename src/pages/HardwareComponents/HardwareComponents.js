@@ -3,7 +3,7 @@ import { useQuery } from 'react-query';
 import Product from './Product';
 
 const HardwareComponents = () => {
-    const { data: products, isLoading } = useQuery('products', () => fetch('http://localhost:8000/products').then(res => res.json()))
+    const { data: products, isLoading } = useQuery('products', () => fetch('https://radiant-inlet-73945.herokuapp.com/products').then(res => res.json()))
     console.log(products);
     return (
         <div className=' grid-cols-3 grid'>

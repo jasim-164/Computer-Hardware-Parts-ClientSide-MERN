@@ -14,7 +14,7 @@ const useToken = user1 =>{
         console.log("amar email",email);
         const currentUser = {email: email};
         if(email){
-            fetch(`http://localhost:8000/user/${email}`, {
+            fetch(`https://radiant-inlet-73945.herokuapp.com/user/${email}`, {
                 method:'PUT',
                 headers: {
                     'content-type': 'application/json'
