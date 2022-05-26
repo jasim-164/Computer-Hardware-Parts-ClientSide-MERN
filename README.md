@@ -1,70 +1,118 @@
-# Getting Started with Create React App
+# My Projects related All links  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## github server side link: 
+ https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-jasim-164
 
-## Available Scripts
+## github client side link: 
+https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-jasim-164
 
-In the project directory, you can run:
+## firebase deploy link :
+ https://grocery-store-fullstack.web.app/
 
-### `npm start`
+## heroku deploy link:
+https://protected-meadow-32127.herokuapp.com/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## stackoverflow question link : 
+https://stackoverflow.com/questions/72071203/why-event-preventdefault-function-is-so-important
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# what I haved used in this project 
+## Generate a random JWT secret :
+### Run this script on the terminal:
+* link: https://jwt.io/#debugger-io
+* node -e 
+* "console.log(require('crypto').randomBytes(32).toString('hex'))"
+## Heroku deploy :
+    ONE TIME for your computer
+    -----------------
+      1. create heroku account
+      2. verify email
+      3. install heroku cli
+      4. heroku login
 
-### `npm test`
+    For each project one time
+    --------------------------
+    1. heroku create
+    2. make sure you: git add . git commit. git push
+    3. git push heroku main
+    4. Go to Heroku Dashboard > Current Project> Settings > Reveal Config vars
+    5. copy paste config vars from your .env file
+    6. Make sure you have whitelisted all ip address to access mongodb
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    UPDATE SERVER with new changes
+    ------------------------
+    1. Make changes
+    2. make sure you: git add . git commit. git push
+    3. git push heroku main
 
-### `npm run build`
+    Connect Server with Client and deploy client
+    -------------------------
+    1. replace localhost by heroku link
+    2. npm run build
+    3. firebase deploy
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    
+# react hook forms 
+* https://react-hook-form.com/get-started#Integratinganexistingform
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* https://react-hook-form.com/get-started#Registerfields
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# axios install in react
+* npm install axios
+* https://www.digitalocean.com/community/tutorials/react-axios-react
 
-### `npm run eject`
+#  Toastify install in react
+* npm install --save react-toastify
+* import { ToastContainer, toast } from 'react-toastify';
+* import 'react-toastify/dist/ReactToastify.css';
+* toast("Wow so easy !");
+* ToastContainer tag place anywhere
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# MongoDB use in MERN Stack
+ * create account for MongoDB
+ * then create create cluster
+ * then create database name
+ * then create collection
+ * for your project save your username and Password
+ 
+ # react router install
+  * https://reactrouter.com/docs/en/v6/getting-started/installation
+ * npm install react-router-dom@6
+ ## Rect Router DOM
+* https://reactrouter.com/docs/en/v6/getting-started/installation
+## For using private pages 
+* https://stackblitz.com/github/remix-run/react-router/tree/main/examples/auth?file=src/App.tsx
+## React Firebase HOOKS
+* https://github.com/CSFrequency/react-firebase-hooks
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## For photo Hosting In online
+* https://ibb.co/album/N6HqdS/embeds
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## CSS Framework REACT-BOOTSTRAP USE
+* https://react-bootstrap.netlify.app/components/cards/#background-color
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## For FontAwesomeIcon
+* https://fontawesome.com/v5/docs/web/use-with/react
+    * Install first: Fontawesome in React
+       * npm i --save @fortawesome/fontawesome-svg-core 
+       * npm i --save @fortawesome/free-brands-svg-icons 
+           // mainly used for social logo
+       * npm i --save @fortawesome/react-fontawesome
 
-## Learn More
+    *  Then :
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    * import in your project
+ 
+        * import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
+        * import { faFacebook  } from '@fortawesome/free-brands-svg-icons';
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+    * Use this
+        *  </FontAwesomeIcon icon={faFacebook}>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
