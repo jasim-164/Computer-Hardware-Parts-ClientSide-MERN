@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react"
-
-const useToken = user =>{
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from"../firebase.init";
+import Loading from "../pages/Shared/Loading";
+const useToken = user1 =>{
     const [token, setToken] = useState('');
-
+    const[user,loading]= useAuthState(auth);
+    if(loading){
+        <Loading/>
+    }
+    console.log("amar email",user);
     useEffect( () =>{
-        const email = user?.user?.email;
-        
+        const email = user?.email;
+        console.log("amar email",email);
         const currentUser = {email: email};
         if(email){
             fetch(`http://localhost:8000/user/${email}`, {

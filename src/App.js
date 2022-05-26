@@ -24,6 +24,7 @@ import MyOrders from "./pages/Dashboard/MyOrders";
 import SignUp from "./pages/Login/SignUp";
 import RequireAuth from "./pages/Login/RequireAuth";
 import OrderProduct from "./pages/HardwareComponents/OrderProduct";
+import AllUser from "./pages/Dashboard/AllUser";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           <Route path="review" element={<MyReview></MyReview>}></Route>
           <Route path="history" element={<MyProfile></MyProfile>}></Route>
           <Route path="payment/:id" element={<Payment></Payment>}></Route>
+          <Route path="users" element={<AllUser></AllUser>}></Route>
           <Route path="addProduct" element={<AddProduct></AddProduct>}></Route>
           <Route
             path="manageProducts"
