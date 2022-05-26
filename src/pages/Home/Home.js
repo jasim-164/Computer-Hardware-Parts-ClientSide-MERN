@@ -6,6 +6,9 @@ import Banner from './Banner';
 import Info from './Info';
 import Review from './Review';
 import StatePage from './StatePage';
+import ExtraSection from './ExtraSection/ExtraSection'
+import DealSection from './DealSection/DealSection'
+import ContactSection from './ContactSection/ContactSection';
 
 const Home = () => {
     const { data: products, isLoading } = useQuery('products', () => fetch('https://radiant-inlet-73945.herokuapp.com/products').then(res => res.json()))
@@ -24,6 +27,9 @@ const Home = () => {
         </div>
         <StatePage/>
         <Review/>
+        <ExtraSection/>
+        <DealSection/>
+        <ContactSection/>
         </div>
     );
 };

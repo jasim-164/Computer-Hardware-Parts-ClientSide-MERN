@@ -18,7 +18,7 @@ const MyProfile = () => {
 
   const email = user?.email;
   const fetchUsers = async () => {
-    const res = await fetch(`https://radiant-inlet-73945.herokuapp.com/${email}`);
+    const res = await fetch(`https://radiant-inlet-73945.herokuapp.com/user/${email}`);
     return res;
   };
   const{data:userdata,isLoading,refetch}= useQuery('userData',fetchUsers)
@@ -27,7 +27,7 @@ const MyProfile = () => {
     return <Loading/>
     
   }
-  
+  refetch();
   console.log(userdata);
 
   const onSubmit = async (data) => {
